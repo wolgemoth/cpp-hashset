@@ -41,7 +41,7 @@
 namespace LouiEriksson {
 	
 	/**
-	 * @mainpage Version 1.0.0
+	 * @mainpage Version 1.0.1
 	 * @details Custom Hashset implementation accepting a customisable type.
 	 *          This implementation requires that the given type is compatible with std::hash and is copyable.
 	 * @tparam T Entry type of the Hashset.
@@ -88,7 +88,7 @@ namespace LouiEriksson {
 					for (auto& key1 : bucket) {
 
 						if (m_Size >= m_Buckets.size()) {
-							Resize(m_Buckets.size() * 2);
+							Resize(m_Buckets.size() * 2U);
 						}
 
 						// Create an index by taking the key's hash value and "wrapping" it with the number of buckets.
@@ -513,7 +513,7 @@ namespace LouiEriksson {
 			try {
 
 				if (m_Size >= m_Buckets.size()) {
-					Resize(m_Buckets.size() * 2);
+					Resize(m_Buckets.size() * 2U);
 				}
 
 				// Create an index by taking the key's hash value and "wrapping" it with the number of buckets.
@@ -556,7 +556,7 @@ namespace LouiEriksson {
 			try {
 
 				if (m_Size >= m_Buckets.size()) {
-					Resize(m_Buckets.size() * 2);
+					Resize(m_Buckets.size() * 2U);
 				}
 
 				// Create an index by taking the key's hash value and "wrapping" it with the number of buckets.
@@ -600,7 +600,7 @@ namespace LouiEriksson {
 			try {
 
 				if (m_Size >= m_Buckets.size()) {
-					Resize(m_Buckets.size() * 2);
+					Resize(m_Buckets.size() * 2U);
 				}
 
 				// Create an index by taking the key's hash value and "wrapping" it with the number of buckets.
@@ -643,7 +643,7 @@ namespace LouiEriksson {
 			try {
 
 				if (m_Size >= m_Buckets.size()) {
-					Resize(m_Buckets.size() * 2);
+					Resize(m_Buckets.size() * 2U);
 				}
 
 				// Create an index by taking the key's hash value and "wrapping" it with the number of buckets.
